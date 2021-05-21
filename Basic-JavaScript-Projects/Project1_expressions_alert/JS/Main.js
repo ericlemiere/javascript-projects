@@ -5,3 +5,7 @@ var blueFont = "This font is blue", blueFont = blueFont.fontcolor("blue"); //cha
 window.alert(A)
 
 document.write(blueFont + " and Seven multiplied by Three returns a value of " + 7*3 + ". " + smiley);
+
+function displayDate() {
+    document.getElementById("date").innerHTML = Date();
+}
