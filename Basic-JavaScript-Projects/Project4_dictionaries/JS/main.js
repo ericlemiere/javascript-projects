@@ -1,4 +1,4 @@
-
+// Dictionary that defines a Dog and its attributes
 function dogDictionary() {
     var dog = {
         Breed: "Boxer",
@@ -8,6 +8,6 @@ function dogDictionary() {
         Age: 8,
         Sound: "Bark"
     };
-    delete dog.Name;
-    document.getElementById("Dictionary").innerHTML = dog.Name;
+    delete dog.Name; // deleting Name from the dictionary
+    document.getElementById("Dictionary").innerHTML = dog.Name; //prints the dog's name
 }
