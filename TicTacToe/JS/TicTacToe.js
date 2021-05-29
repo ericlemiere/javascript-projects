@@ -36,9 +36,9 @@ function placeXorO(squareNumber) {
         //condition checks to see if it is computer's turn
         if(activePlayer === "O") {
             disableClick();
-            setTimeout(function (){ computersTurn();}, 1000);
+            setTimeout(function (){ computersTurn(); }, 1000);
         }
-        return true;
+        return true; //true is needed for computersTurn() to work
     }
 
     /* This function makes the computer take turns.
@@ -54,7 +54,7 @@ function placeXorO(squareNumber) {
             if(placeXorO(pickASquare)) {
                 placeXorO(pickASquare);
                 success = true;
-            }
+            };
         }
     }
 }
@@ -113,15 +113,15 @@ function checkWinConditions() {
     }
     else if (selectedSquares.length >= 9) {
         audio('./media/swell.wav');
-        setTimeout(function() { resetGame(); }, 4000);
-        setTimeout(function () { alert("TIE GAME!\nPress OK to play again");}, 1500);
+        setTimeout(function () { resetGame(); }, 4000);
+        //setTimeout(function () { alert("TIE GAME!\nPress OK to play again");}, 1500);
     }
 
     //Function checks if an array inclues 3 strings and is used for win conditions
     function arrayIncludes(squareA, squareB, squareC) {
-        const a = selectedSquares.includes(squareA);
-        const b = selectedSquares.includes(squareB);
-        const c = selectedSquares.includes(squareC);
+        const a = selectedSquares.includes(squareA)
+        const b = selectedSquares.includes(squareB)
+        const c = selectedSquares.includes(squareC)
 
         if (a === true && b === true && c === true) { return true }
     }
@@ -140,37 +140,37 @@ function audio(audioURL) {
 
 
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
-    const canvas = document.getElementById("win-lines");
-    const c = canvas.getContext('2d');
+    const canvas = document.getElementById("win-lines")
+    const c = canvas.getContext("2d");
 
     let x1 = coordX1, //inidcates start of x axis line
         y1 = coordY1, //indicate start of y axis line
         x2 = coordX2, //end of x axis
         y2 = coordY2, //end of y axis
-        x = x1, //sotres temporary x axis that updates in animation loop
+        x = x1, //stores temporary x axis that updates in animation loop
         y = y1; //temporary y axis
 
     
     function animateLineDrawing() {
         const animationLoop = requestAnimationFrame(animateLineDrawing);
-        c.clearRect(0,0,608,608); //clear content from last loop
+        c.clearRect(0,0,608,608) //clear content from last loop
         c.beginPath(); //starts new path
-        c.moveTo(x1,y1);
-        c.lineTo(x,y);
+        c.moveTo(x1,y1)
+        c.lineTo(x,y)
         c.lineWidth = 10;
         c.strokeStyle = "rgba(70,255,33,0.8)";
         c.stroke();
 
         //checks if we've reached enpoint
         if (x1 <= x2 && y1 <= y2) {
-            if(x < x2) { x += 10; }
-            if(y < y2) { y += 10; }
+            if (x < x2) { x += 10; }
+            if (y < y2) { y += 10; }
             if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
         }
         // necessary for diagonal win conditions
         if (x1 <= x2 && y1 >= y2) {
-            if(x < x2) { x += 10; }
-            if(y > y2) { y -= 10; }
+            if (x < x2) { x += 10; }
+            if (y > y2) { y -= 10; }
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
@@ -182,17 +182,17 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         cancelAnimationFrame(animationLoop);
     }
     disableClick();
-    audio("./media/beatzilla.wav");
+    audio('./media/beatzilla.wav');
     animateLineDrawing();
     setTimeout(function () { clear(); resetGame(); }, 8000);
-    setTimeout(function () { alert("Press OK to play again");}, 2000);
+    //setTimeout(function () { alert("Press OK to play again");}, 2000);
 }
 
 
 //function resets game
 function resetGame() {
-    for(let i=0; i<9; i++) {
-        let square = document.getElementById(String(i));
+    for (let i = 0; i < 9; i++) {
+        let square = document.getElementById(String(i))
         square.style.backgroundImage = "";
     }
     selectedSquares = [];
