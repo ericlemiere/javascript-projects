@@ -102,9 +102,11 @@ keys.addEventListener("click", (event) => {
 
     const { target } = event;
     //if element clicked isn't a button, exit the function
-
     if (!target.matches("button")) {
         return;
+    }
+    if (target.matches("button")) {
+        audio('./Sounds/buttonClick.wav');
     }
     if (target.classList.contains("operator")) {
         Handle_Operator(target.value);
@@ -121,7 +123,15 @@ keys.addEventListener("click", (event) => {
         Update_Display();
         return;
     }
-
+    
     Input_Digit(target.value);
     Update_Display();
 })
+
+
+
+// play click sound when using calculator
+function audio(audioURL) {
+    let audio = new Audio(audioURL);
+    audio.play();
+}
