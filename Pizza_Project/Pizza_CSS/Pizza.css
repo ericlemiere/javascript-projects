@@ -1,0 +1,107 @@
+
+
+body {
+    background-image: url("../Pizza_Media/bgImage.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    -webkit-background-size: cover;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Mate SC', serif;
+    font-size: 50px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+}
+
+h3{
+    color: white;
+    font-family: 'Mate SC', serif;
+    padding-left: 4px;
+}
+
+
+
+#menuBG {
+    width: 800px;
+    height: 800px;
+    margin: 10px auto;
+    background-color: rgba(100, 7, 7, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+
+#frmMenu {
+    width: 800px;
+    height: 400px;
+    margin-top: 40px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+.left {
+    width: 30%;
+    height: 220px;
+    float: left;
+    margin-left: 9px;
+    padding-left: 8px;
+    padding-bottom: 10px;
+    border: 3px solid #abad21;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.right {
+    width: 30%;
+    height: 220px;
+    float: left;
+    border: 3px solid #73AD21;
+    padding-left: 8px;
+    padding-bottom: 10px;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    margin-left: auto;
+    width: 400px;
+    height: 200px;
+}
+
+#cart h3 {
+    padding: 0;
+}
+
+#btnOrder {
+    margin-left: 40%;
+    margin-bottom: 6px;
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+#btnOrder:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-color: black;
+}
