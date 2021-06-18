@@ -6,6 +6,7 @@ These are some projects I created using JavaScript, HTML, and CSS.
 - [Pizza Menu](https://github.com/ericlemiere/javascript-projects/tree/main/Pizza-Project)
 - [Tic Tac Toe](https://github.com/ericlemiere/javascript-projects/tree/main/TicTacToe)
 - [Calculator](https://github.com/ericlemiere/javascript-projects/tree/main/Calculator)
+- [To Do App](https://github.com/ericlemiere/javascript-projects/tree/main/ToDo_app)
 
 
 ### Pizza Menu:
@@ -15,5 +16,7 @@ This is a mock Pizza menu where the user can order a pizza and customize its top
 A classic tic tac toe game when you play against the computer. 
 
 ### Calculator:
-A basic, classic calculator app. 
+A basic, 4-functin calculator app with a classic look and feel. 
 
+### ToDo App:
+A basic ToDo app.
