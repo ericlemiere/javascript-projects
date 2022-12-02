@@ -7,6 +7,7 @@ These are some projects I created using JavaScript, HTML, and CSS.
 - [Tic Tac Toe](https://github.com/ericlemiere/javascript-projects/tree/main/TicTacToe)
 - [Calculator](https://github.com/ericlemiere/javascript-projects/tree/main/Calculator)
 - [To Do App](https://github.com/ericlemiere/javascript-projects/tree/main/ToDo_app)
+- [Weather App](https://github.com/ericlemiere/javascript-projects/tree/main/weather_app)
 
 
 ### Pizza Menu:
@@ -20,3 +21,6 @@ A basic, 4-functin calculator app with a classic look and feel.
 
 ### ToDo App:
 A basic ToDo app.
+
+### Weather App:
+This app calls an API from a weather site and receives JSON data to parse through. The data is limited, due to it being a free account, so the app is also limited and has its shortcomings.
